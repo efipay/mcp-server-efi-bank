@@ -1,0 +1,15 @@
+{
+  "mcpServers": {
+    "mcp-server-efi": {
+      "command": "node",
+      "args": [
+        "path\\to\\mcp-server-efi\\dist\\src\\index.js",
+        "--sandbox=false",
+        "--client-id=Client_Id_...",
+        "--client-secret=Client_Secret_..",
+        "--certificate=Certificado em Base64",
+        "--validate-mtls=true"
+      ]
+    }
+  }
+}

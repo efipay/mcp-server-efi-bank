@@ -1,0 +1,43 @@
+{
+  "name": "mcp-server-efi",
+  "version": "0.0.4",
+  "description": "Um serviço que permite o consumo das APIs do Efí Bank através de um servidor MCP.",
+  "author": "João Lucas Alberto Muniz",
+  "type": "module",
+  "bin": {
+    "mcp-server-efi": "dist/src/index.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "start": "node --no-warnings dist/index.js",
+    "dev": "node --inspect --watch src/index.ts",
+    "build": "node -e \"const fs = require('fs'); fs.rmSync('dist', { recursive: true, force: true });\" && tsc && shx chmod +x dist/src/*.js",
+    "prepare": "npm run build",
+    "watch": "tsc --watch"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.5.0",
+    "json-schema-to-zod": "^2.6.1",
+    "minimist": "^1.2.8",
+    "sdk-node-apis-efi": "^1.2.20",
+    "zod": "^3.22.4"
+  },
+  "devDependencies": {
+    "@types/minimist": "^1.2.5",
+    "@types/node": "^20.17.30",
+    "eslint": "^8.2.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-prettier": "^10.1.2",
+    "eslint-plugin-import": "^2.25.3",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-prettier": "^5.2.6",
+    "eslint-plugin-react": "^7.28.0",
+    "eslint-plugin-react-hooks": "^4.3.0",
+    "prettier": "^3.5.3",
+    "shx": "^0.3.4",
+    "typescript": "^5.8.3"
+  },
+  "license": "MIT"
+}
